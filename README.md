@@ -17,7 +17,7 @@ END
 ```mermaid
 flowchart TD
     A([START]) --> B[/Read number_1, number_2/]
-    B --> C[product = number_1 * number_2]
+    B --> C[product = number_1 * <br> number_2]
     C --> D[/Display product/]
     D --> E([END])
 ```
@@ -104,13 +104,13 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[/Read dice1_value,dice2_value/]
+    A([START]) --> B[/Read dice1_value,<br> dice2_value/]
     B --> C{dice1_value > dice2_value?}
     C --> |Yes| D[/Display "Player 1 Win"/]
     C --> |No| E{dice2_value > dice1_value}
     D --> H([END])
-    E --> |Yes| F[/Player 2 Win/]
-    E --> |No| G[/Tie/]
+    E --> |Yes| F[/PDisplay "Player 2 Win" /]
+    E --> |No| G[/Display "Tie"/]
     F --> H
     G --> H
 
@@ -160,9 +160,9 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[Generate 10 random number]
-    B --> C[Find the minimum of 10 random number]
-    C --> D[/Display the minimum of 10 random number/]
+    A([START]) --> B[Generate 10 <br> random number]
+    B --> C[Find the minimum of 10 <br> random number]
+    C --> D[/Display the minimum of 10 <br> random number/]
     D --> E([END])
     
 ```
@@ -189,7 +189,7 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[Generate 10 random numbers]
+    A([START]) --> B[Generate 10 <br> random numbers]
     B --> C{All number processed?}
     C --> |No| D{number <= 100 and number >= 10 ?}
     D --> |Yes| E{number % 2 == 0?}
@@ -197,7 +197,7 @@ flowchart TD
     E --> |No| G[num_odd = num_odd + 1]
     F --> C
     G --> C
-    C --> |Yes| H[/Display num_even, num_odd/]
+    C --> |Yes| H[/Display num_even, <br> num_odd/]
     D --> |No| C
     H --> I([END])
     
@@ -294,7 +294,7 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[Generate 10 student gender]
+    A([START]) --> B[Generate 10 <br> student gender]
     B --> C{All student done processing?}
     C --> |No| D{gender == 'F'?}
     D --> |Yes| E[num_female += 1]
@@ -324,7 +324,7 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[Generate 5 random numbers]
+    A([START]) --> B[Generate 5 <br> random numbers]
     B --> C[Store numbers in list]
     C --> D[Sort list in descending order]
     D --> E[/Display sorted list/]
