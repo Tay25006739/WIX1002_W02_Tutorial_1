@@ -195,8 +195,9 @@ flowchart TD
     D --> |Yes| E{number % 2 == 0?}
     E --> |Yes| F[num_even = num_even + 1]
     E --> |No| G[num_odd = num_odd + 1]
-    F --> C
-    G --> C
+    F --> J[Proceed to next number]
+    G --> J
+    J --> C
     C --> |Yes| H[/Display num_even, <br> num_odd/]
     D --> |No| C
     H --> I([END])
@@ -236,7 +237,7 @@ flowchart TD
     G --> |Yes| H[num_m += 1]
     H --> I[Proceed to next word]
     F --> I
-    G --> I
+    G --> |No| I
     I --> C
     D --> J([END])
     
@@ -294,7 +295,7 @@ END
 #### 🧮 Flow Chart
 ```mermaid
 flowchart TD
-    A([START]) --> B[Generate 10 <br> student gender]
+    A([START]) --> B[Generate 100 <br> student gender]
     B --> C{All student done processing?}
     C --> |No| D{gender == 'F'?}
     D --> |Yes| E[num_female += 1]
