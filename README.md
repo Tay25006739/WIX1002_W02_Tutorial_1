@@ -61,16 +61,8 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read mark/]
-    B --> C{mark >= 40 ?}
-    C --> |Yes| D[/Display "Pass"/]
-    C --> |No| E[/Display "Failed"/]
-    D --> F([END])
-    E --> F
-    
-```
+
+![Flowchart for question 1](Q3.png)
 
 
 
@@ -92,21 +84,9 @@ START
     End If
 END
 ```
-#### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read dice1_value,<br> dice2_value/]
-    B --> C{dice1_value > dice2_value?}
-    C --> |Yes| D[/Display "Player 1 Win"/]
-    C --> |No| E{dice2_value > dice1_value}
-    D --> H([END])
-    E --> |Yes| F[/PDisplay "Player 2 Win" /]
-    E --> |No| G[/Display "Tie"/]
-    F --> H
-    G --> H
+#### 🧮 Flow Chart 
 
-    
-```
+![Flowchart for question 1](Q4.png)
 
 ### Question 5
 #### 📊 IPO Model
@@ -124,14 +104,8 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read length,width/]
-    B --> C[perimeter = 2 * length + <br> 2 * width]
-    C --> D[/Display perimeter/]
-    D --> E([END])
-    
-```
+
+![Flowchart for question 1](Q5.png)
 
 ### Question 6
 #### 📊 IPO Model
@@ -145,7 +119,7 @@ flowchart TD
 START 
     Initialize empty list numbers
 
-    For i = 1 To 10 
+    For i = 0 To 9
         Generate random_number
         numbers[i] = random_number
     End for
@@ -160,14 +134,9 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[Generate 10 <br> random number]
-    B --> C[Find the minimum of 10 <br> random number]
-    C --> D[/Display the minimum of 10 <br> random number/]
-    D --> E([END])
-    
-```
+
+![Flowchart for question 1](Q6.png)
+
 ### Question 7
 #### 📊 IPO Model
 | Input | Process | Output |
@@ -186,33 +155,16 @@ START
     End for
 
     For each number in numbers 
-        If number <= 100 and number >= 10
-            If number % 2 == 0
-                num_even = num_even + 1
-            Else
-                num_odd = num_odd + 1
+        If number <= 100 and number >= 10 and number % 2 == 0
+            num_even = num_even + 1
+        Else 
+            num_odd = num_odd + 1
 
     Display num_even, num_odd
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[Generate 10 <br> random numbers]
-    B --> C{All number processed?}
-    C --> |No| D{number <= 100 and number >= 10 ?}
-    D --> |Yes| E{number % 2 == 0?}
-    E --> |Yes| F[num_even = num_even + 1]
-    E --> |No| G[num_odd = num_odd + 1]
-    F --> J[Proceed to next number]
-    G --> J
-    J --> C
-    C --> |Yes| H[/Display num_even, <br> num_odd/]
-    D --> |No| C
-    H --> I([END])
-    
-    
-```
+![Flowchart for question 1](Q7.png)
 
 ### Question 8
 #### 📊 IPO Model
@@ -236,24 +188,9 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read sentence/]
-    B --> C{All alphabet processed?}
-    C --> |Yes| D[/Display num_u, num_m/]
-    C --> |No| E{alphabet == 'U' ?}
-    E --> |Yes| F[num_u += 1]
-    F --> C
-    E --> |No| G{alphabet == 'M' ?}
-    G --> |Yes| H[num_m += 1]
-    H --> I[Proceed to next word]
-    F --> I
-    G --> |No| I
-    I --> C
-    D --> J([END])
-    
 
-```
+![Flowchart for question 1](Q8.png)
+
 ### Question 9
 #### 📊 IPO Model
 | Input | Process | Output |
@@ -265,7 +202,7 @@ flowchart TD
 ```text
 START 
     Read keyword
-    For each word in keyword
+    For each word in web page
         If word == keyword
             frequency += 1
         End if
@@ -274,19 +211,8 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read keyword/]
-    B --> C{All word done searching?}
-    C --> |Yes| D[/Display frequency/]
-    C --> |No| E{word == keyword?}
-    E --> |Yes| F[frequency += 1]
-    E --> |No| I[Proceed to next word]
-    F --> I
-    I --> C
-    D --> H([END])
-    
-```
+
+![Flowchart for question 1](Q9.png)
 
 ### Question 10
 #### 📊 IPO Model
@@ -304,7 +230,6 @@ START
         genders[i] = random_char
     End for
 
-    Generate 100 student's gender
     For each gender in genders
         If gender == "F"
             num_female += 1
@@ -314,18 +239,7 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[Generate 100 <br> student gender]
-    B --> C{All student done processing?}
-    C --> |No| D{gender == 'F'?}
-    D --> |Yes| E[num_female += 1]
-    D --> |No| G[Proceed to next student]
-    E --> G
-    G --> C
-    C --> |Yes| F[/Display num_female/]
-    F --> H([END])
-```
+![Flowchart for question 1](Q10.png)
 
 ### Question 11
 #### 📊 IPO Model
@@ -360,14 +274,7 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[Generate 5 <br> random numbers]
-    B --> C[Store numbers in list]
-    C --> D[Sort list in descending order]
-    D --> E[/Display sorted list/]
-    E --> F([END])
-```
+![Flowchart for question 1](Q11.png)
 
 ### Question 12
 #### 📊 IPO Model
@@ -388,14 +295,5 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[Generate  random numbers]
-    B --> C[/Read guess from user/]
-    C --> D{ guess == random number?}
-    D --> |Yes| E[/Display 'Correct'/]
-    D --> |No| F[/Display 'Wrong'/]
-    E --> G([END])
-    F --> G
-```
+![Flowchart for question 1](Q12.png)
 
