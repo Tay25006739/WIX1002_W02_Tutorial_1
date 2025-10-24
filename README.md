@@ -46,8 +46,7 @@ END
 
 ### 📃 Question 3
 
-### Print the pass/fail grade based on the mark entered by user. The passing mark is at
-least 40.
+### Print the pass/fail grade based on the mark entered by user. The passing mark is at least 40.
 
 #### 📊 IPO Model
 | Input | Process | Output |
