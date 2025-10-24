@@ -37,16 +37,8 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read number/]
-    B --> C{number > 50 ?}
-    C --> |Yes| D[/Display "Yes"/]
-    C --> |No| E[/Display "No"/]
-    D --> F([END])
-    E --> F
-    
-```
+
+![Flowchart for question 1](Q2.png)
 
 ### Question 3
 | Input | Process | Output |
