@@ -14,13 +14,9 @@ START
 END
 ```
 #### 🧮 Flow Chart
-```mermaid
-flowchart TD
-    A([START]) --> B[/Read number_1, number_2/]
-    B --> C[product = number_1 * <br> number_2]
-    C --> D[/Display product/]
-    D --> E([END])
-```
+
+![Flowchart for question 1](Q1.png)
+
 
 
 ### 📃 Question 2
@@ -37,6 +33,7 @@ START
         Display "Yes"
     Else
         Display "No"
+    End If
 END
 ```
 #### 🧮 Flow Chart
@@ -68,6 +65,7 @@ START
         Display "Pass"
     Else
         Display "Failed"
+    End if
 END
 ```
 #### 🧮 Flow Chart
@@ -99,6 +97,7 @@ START
         Display "Player 2 Win"
     Else
         Display "Tie"
+    End If
 END
 ```
 #### 🧮 Flow Chart
@@ -136,7 +135,7 @@ END
 ```mermaid
 flowchart TD
     A([START]) --> B[/Read length,width/]
-    B --> C[perimeter = 2 * length + 2 * width]
+    B --> C[perimeter = 2 * length + <br> 2 * width]
     C --> D[/Display perimeter/]
     D --> E([END])
     
@@ -152,8 +151,19 @@ flowchart TD
 #### 💻 Pseudocode
 ```text
 START 
-    Generate 10 random number
-    Find minimum of 10 random number
+    Initialize empty list numbers
+
+    For i = 1 To 10 
+        Generate random_number
+        numbers[i] = random_number
+    End for
+
+    min = numbers[0]
+
+    For each number In numbers Do
+        If number < min 
+            min = number
+
     Display the minimum of 10 random number
 END
 ```
@@ -176,13 +186,20 @@ flowchart TD
 #### 💻 Pseudocode
 ```text
 START 
-    Generate 10 random numbers
-    For each number 
+    Initialize empty list numbers
+
+    For i = 1 To 10 
+        Generate random_number
+        numbers[i] = random_number
+    End for
+
+    For each number in numbers 
         If number <= 100 and number >= 10
             If number % 2 == 0
                 num_even = num_even + 1
             Else
                 num_odd = num_odd + 1
+
     Display num_even, num_odd
 END
 ```
@@ -216,11 +233,13 @@ flowchart TD
 ```text
 START 
     Read sentence
-    For each alphabet
+    For each alphabet in sentence
         If alphabet == "U"
             num_u += 1
         Else if alphabet == "M"
             num_m += 1
+        End If
+    End For
     Display num_u,num_m
 END
 ```
@@ -254,9 +273,11 @@ flowchart TD
 ```text
 START 
     Read keyword
-    For each word
+    For each word in keyword
         If word == keyword
             frequency += 1
+        End if
+    End For
     Display frequency
 END
 ```
@@ -284,11 +305,19 @@ flowchart TD
 
 #### 💻 Pseudocode
 ```text
-START 
+START
+    Initialize empty list genders
+    For i = 1 To 100 
+        Generate random_char 'M' or 'F'
+        genders[i] = random_char
+    End for
+
     Generate 100 student's gender
-    For each student
+    For each gender in genders
         If gender == "F"
             num_female += 1
+        End If
+    End For
     Display num_female
 END
 ```
@@ -316,10 +345,26 @@ flowchart TD
 #### 💻 Pseudocode
 ```text
 START 
-    Generate 5 random number
-    Store them in list
-    Sort in descending order
-    Display 5 random number in descending order 
+    Initialize empty list numbers
+
+    For i = 0 To 4
+        Generate random_number
+        Set numbers[i] = random_number
+    End for
+
+    temp = 0
+
+    For i = 0 To 4
+        For j = 0 To (4-i-1) 
+            If numbers[j] < numbers[j+1]
+                temp = numbers[j]
+                numbers[j] = numbers[j+1]
+                numbers[j+1] = temp
+            End If
+        End For
+    End For 
+
+    Display numbers list
 END
 ```
 #### 🧮 Flow Chart
@@ -343,7 +388,7 @@ flowchart TD
 ```text
 START 
     Generate random number
-    Read guess from user
+    Read guess 
     If guess == random number
         Display "Correct"
     Else
